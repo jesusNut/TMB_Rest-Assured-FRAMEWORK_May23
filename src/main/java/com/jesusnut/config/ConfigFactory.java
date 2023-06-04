@@ -25,7 +25,7 @@ public final class ConfigFactory {
 		else {
 
 			throw new FrameworkException(
-					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + ":: Base URL is either null or blank. \n Investigate in System properties/System environment/config.properties files");
+					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + "=> Base URL is either null or blank. \n Investigate in System properties/System environment/config.properties files");
 		}
 
 	}
@@ -41,7 +41,7 @@ public final class ConfigFactory {
 		} catch (UnsupportedOperationException | NullPointerException e) {
 
 			throw new FrameworkException(
-					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + ":: Please enter correct values [true/false] for [customizedReport] key in System properties/System environment/config.properties files. Entered value is either blank or incorrect OR \n [customizedReport] key provided through System properties/System environment/Config.properties files is either missing/commented out",
+					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + "=> Please enter correct values [true/false] for [customizedReport] key in System properties/System environment/config.properties files. Entered value is either blank or incorrect OR \n [customizedReport] key provided through System properties/System environment/Config.properties files is either missing/commented out",
 					e);
 
 		}
@@ -60,7 +60,7 @@ public final class ConfigFactory {
 		} catch (UnsupportedOperationException | NullPointerException e) {
 
 			throw new FrameworkException(
-					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + ":: Please enter correct values [true/false] for [overrideReports] key in System properties/System environment/config.properties files. Entered value is either blank or incorrect OR \n [overrideReports] key provided through System properties/System environment/Config.properties files is either missing/commented out",
+					FrameworkConstants.FRAMEWORK_EXCEPTION_GENERIC_MESSAGE + "=> Please enter correct values [true/false] for [overrideReports] key in System properties/System environment/config.properties files. Entered value is either blank or incorrect OR \n [overrideReports] key provided through System properties/System environment/Config.properties files is either missing/commented out",
 					e);
 
 		}

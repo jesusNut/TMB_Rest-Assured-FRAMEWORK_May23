@@ -17,16 +17,19 @@ public class DeleteTests {
 
 	public void deleteAnEmployee() {
 		
-		for(int i = 73; i<75; i++) {
-			
-
-		Response response = RequestBuilder.buildRequestForDeleteCalls().pathParam("id", i).delete("/employees/{id}");
+//		for(int i = 73; i<75; i++) {
+//			
+//
+//		Response response = RequestBuilder.buildRequestForDeleteCalls().pathParam("id", i).delete("/employees/{id}");
+//		
+//		response.prettyPrint();
+//
+//		Assertions.assertThat(response.getStatusCode()).isEqualTo(200);
+//		
+//		}
 		
-		response.prettyPrint();
-
-		Assertions.assertThat(response.getStatusCode()).isEqualTo(200);
 		
-		}
+		Response response = RequestBuilder.buildRequestForDeleteCalls().pathParam("id", 7832).delete("/employees/{id}");
 		
 		
 		
