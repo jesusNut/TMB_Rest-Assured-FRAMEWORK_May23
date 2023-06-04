@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public final class RandomUtils {
+public final class RandomDataUtils {
 
 	public static int getFakeID() {
 

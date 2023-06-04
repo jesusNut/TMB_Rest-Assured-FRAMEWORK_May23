@@ -17,7 +17,7 @@ import com.jesusnut.pojo.Employee;
 import com.jesusnut.pojo.FavfoodForComplexEmployee;
 import com.jesusnut.pojo.MarksForComplexEmployee;
 import com.jesusnut.utils.FileReadWriteUtils;
-import com.jesusnut.utils.RandomUtils;
+import com.jesusnut.utils.RandomDataUtils;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -32,9 +32,10 @@ public class PostTests  {
 
 	public void createSimpleEmployeePOJO() {
 
-		Employee payload = Employee.builder().setFirst_name(RandomUtils.getFakeFirstName())
-				.setLast_name(RandomUtils.getFakeLastName()).setId(RandomUtils.getFakeID())
-				.setEmail(RandomUtils.getFakeEmail()).build();
+		Employee payload = Employee.builder().setFirst_name(RandomDataUtils.getFakeFirstName())
+				.setLast_name(RandomDataUtils.getFakeLastName()).setId(RandomDataUtils.getFakeID())
+				.setEmail(RandomDataUtils.getFakeEmail()).build();
+		
 
 		RequestSpecification requestSpecification = RequestBuilder.buildRequestForPostCalls().body(payload);
 
@@ -66,10 +67,10 @@ public class PostTests  {
 
 		String jsonContentInFile = FileReadWriteUtils.readJSONFileAndGetAsString("Employee.json");
 
-		jsonContentInFile = jsonContentInFile.replace("firstName", RandomUtils.getFakeFirstName())
-				.replace("lastName", RandomUtils.getFakeLastName())
-				.replace("number", String.valueOf(RandomUtils.getFakeID()))
-				.replace("emailID", RandomUtils.getFakeEmail());
+		jsonContentInFile = jsonContentInFile.replace("firstName", RandomDataUtils.getFakeFirstName())
+				.replace("lastName", RandomDataUtils.getFakeLastName())
+				.replace("number", String.valueOf(RandomDataUtils.getFakeID()))
+				.replace("emailID", RandomDataUtils.getFakeEmail());
 
 		RequestSpecification requestSpecification = RequestBuilder.buildRequestForPostCalls().body(jsonContentInFile);
 

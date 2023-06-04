@@ -6,7 +6,8 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access=AccessLevel.PRIVATE)
-public final class FakerUtils {
+
+ final class FakerUtils {
 
 	// implementing Faker Utils via singleton + Facade (RandomUtils)
 

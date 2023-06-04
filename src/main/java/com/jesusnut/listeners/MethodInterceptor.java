@@ -51,7 +51,6 @@ public class MethodInterceptor implements IMethodInterceptor {
 
 		}
 
-		System.out.println("Total methods to be run : " + myCustomMethods.size());
 		return myCustomMethods;
 	}
 
