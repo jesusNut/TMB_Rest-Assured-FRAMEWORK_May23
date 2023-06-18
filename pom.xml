@@ -4,7 +4,7 @@
 	<artifactId>RestAssuredFramework_TMB_May23</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	 <name>TMB-RestAsssured-FRAMEWORK-May23</name>
-    <description>A TMB based Rest Asssured Framework created in May 2023</description>
+      
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

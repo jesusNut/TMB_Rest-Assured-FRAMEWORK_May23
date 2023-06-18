@@ -29,7 +29,7 @@ public class DeleteTests {
 //		}
 		
 		
-		Response response = RequestBuilder.buildRequestForDeleteCalls().pathParam("id", 7832).delete("/employees/{id}");
+		Response response = RequestBuilder.buildRequestForDeleteCalls().pathParam("id", 4300).delete("/employees/{id}");
 		
 		
 		

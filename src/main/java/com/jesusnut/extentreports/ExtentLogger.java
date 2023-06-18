@@ -79,17 +79,11 @@ public final class ExtentLogger {
 
 	public static void logRequest(RequestSpecification requestSpecification) {
 
-		logPrettyRequestToReportWithBody(requestSpecification);
+		logPrettyRequestToReport(requestSpecification);
 
 	}
 	
-	// to log request not including request body
-
-		public static void logRequestWithoutBody(RequestSpecification requestSpecification) {
-
-		logPrettyRequestToReportWithoutBody(requestSpecification);
-
-		}
+	
 
 	// to log response
 
@@ -126,7 +120,7 @@ public final class ExtentLogger {
 
 	// to log request inluding request body - private method
 
-	private static void logPrettyRequestToReportWithBody(RequestSpecification requestSpecification) {
+	private static void logPrettyRequestToReport(RequestSpecification requestSpecification) {
 
 		QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
 		
@@ -136,8 +130,12 @@ public final class ExtentLogger {
 		info(MarkupHelper.createLabel("##### LOGGING REQUEST URI : ", ExtentColor.GREY));
 		info(FrameworkConstants.BOLD_START+ query.getURI()+ FrameworkConstants.BOLD_END);
 		
+		if (!(query.getMethod().equalsIgnoreCase("get") || query.getMethod().equalsIgnoreCase("delete"))) {
+		
 		info(MarkupHelper.createLabel("##### LOGGING REQUEST BODY : ", ExtentColor.GREY));
 		info(MarkupHelper.createCodeBlock(query.getBody(), CodeLanguage.JSON));
+		
+		}
 		
 		info(MarkupHelper.createLabel("##### LOGGING HEADERS : ", ExtentColor.GREY));
 		looper(query.getHeaders());
@@ -159,40 +157,7 @@ public final class ExtentLogger {
 
 	}
 	
-	// to log request NOT inluding request body - private method
-
-		private static void logPrettyRequestToReportWithoutBody(RequestSpecification requestSpecification) {
-
-			QueryableRequestSpecification query = SpecificationQuerier.query(requestSpecification);
-			
-
-			info(MarkupHelper.createLabel("##### LOGGING REQUEST DETAILS ##### : ", ExtentColor.GREY));
-
-			
-			info(MarkupHelper.createLabel("##### LOGGING REQUEST URI : ", ExtentColor.GREY));
-			info(FrameworkConstants.BOLD_START+ query.getURI()+ FrameworkConstants.BOLD_END);
-			
-			
-			info(MarkupHelper.createLabel("##### LOGGING HEADERS : ", ExtentColor.GREY));
-			looper(query.getHeaders());
-
-			info(MarkupHelper.createLabel("##### LOGGING COOKIES : ", ExtentColor.GREY));
-			looper(query.getCookies());
-
-			info(MarkupHelper.createLabel("##### LOGGING REQUEST PARAMS : ", ExtentColor.GREY));
-			mapper(query.getRequestParams());
-
-			info(MarkupHelper.createLabel("##### LOGGING QUERY PARAMS : ", ExtentColor.GREY));
-			mapper(query.getQueryParams());
-
-			info(MarkupHelper.createLabel("##### LOGGING PATH PARAMS : ", ExtentColor.GREY));
-			mapper(query.getPathParams());
-
-			info(MarkupHelper.createLabel("##### LOGGING FORM PARAMS : ", ExtentColor.GREY));
-			mapper(query.getFormParams());
-
-		}
-
+	
 	// helper method - 1
 
 	private static void looper(Object object) {

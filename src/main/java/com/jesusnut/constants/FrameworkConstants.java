@@ -4,6 +4,11 @@ import com.aventstack.extentreports.reporter.configuration.ViewName;
 import com.jesusnut.config.ConfigFactory;
 import com.jesusnut.utils.DateTimeUtils;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
+
+@NoArgsConstructor(access=AccessLevel.PRIVATE)
 public final class FrameworkConstants {
 
 	// Constants related to *** ACROSS FRAMEWORK ***
@@ -42,7 +47,7 @@ public final class FrameworkConstants {
 	public static final ViewName[] FRAMEWORK_EXTENTREPORT_VIEWING_ORDER = new ViewName[] { ViewName.DASHBOARD,
 			ViewName.TEST, ViewName.CATEGORY, ViewName.AUTHOR, ViewName.DEVICE, ViewName.LOG };
 	public static final String FRAMEWORK_EXTENT_LOGO_PATH = "url('file:///D:/WORKSPACE/SELENIUM_OWN/TMB_Selenium-FRAMEWORK_July22/src/main/resources/extentCustomizationResources/TMB.png')";
-	private static final String EXTENTREPORTOUTPUT_FOLDER = WORKING_DIRECTORY_PATH + "/extent-test-output/";
+	private static final String EXTENTREPORTOUTPUT_FOLDER = WORKING_DIRECTORY_PATH + "/extent-test-output";
 
 	/**
 	 * Returns Extent Report path.

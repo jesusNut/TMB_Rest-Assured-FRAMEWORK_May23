@@ -33,7 +33,7 @@ import com.jesusnut.enums.Category;
 public @interface FrameworkAnnotation {
 	
 	/**
-	 * Strores ONLY a single author who created the test; from a specified set of
+	 * Stores ONLY a single author who created the test; from a specified set of
 	 * Authors in {@link com.jesusnut.enums.Author }; .<br>
 	 * 
 	 * <pre>

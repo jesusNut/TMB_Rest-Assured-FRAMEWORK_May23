@@ -28,7 +28,7 @@ public class GetTests {
 
 		// to log request without request body (as GET methods dont have request body)
 
-		ExtentLogger.logRequestWithoutBody(requestSpecification);
+		ExtentLogger.logRequest(requestSpecification);
 
 		// to log response in extent report
 
@@ -53,7 +53,7 @@ public class GetTests {
 
 		// to log request without request body (as GET methods dont have request body)
 
-		ExtentLogger.logRequestWithoutBody(requestSpecification);
+		ExtentLogger.logRequest(requestSpecification);
 
 		// to log response in extent report
 
