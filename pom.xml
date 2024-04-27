@@ -11,23 +11,23 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
-		<rest-assured.version>5.3.0</rest-assured.version>
-		<testng-version>7.7.1</testng-version>
-		<owner-java8.version>1.0.12</owner-java8.version>
-		<org.apache.commons.io.version>2.4</org.apache.commons.io.version>
-		<poi-ooxml.version>3.9</poi-ooxml.version>
-		<poi-ooxml-schemas.version>3.9</poi-ooxml-schemas.version>
-		<poi-scratchpad.version>3.9</poi-scratchpad.version>
-		<poi.version>3.9</poi.version>
-		<ooxml-schemas.version>1.1</ooxml-schemas.version>
-		<openxml4j.version>1.0-beta</openxml4j.version>
-		<lombok.version>1.18.26</lombok.version>
-		<extentreports.version>5.0.9</extentreports.version>
-		<jackson-databind.version>2.15.0</jackson-databind.version>
+		<rest-assured.version>5.4.0</rest-assured.version>
+        <testng-version>7.10.1</testng-version>
+        <owner-java8.version>1.0.12</owner-java8.version>
+        <org.apache.commons.io.version>2.4</org.apache.commons.io.version>
+        <poi-ooxml.version>4.1.2</poi-ooxml.version>
+        <poi-ooxml-schemas.version>4.1.2</poi-ooxml-schemas.version>
+        <poi-scratchpad.version>4.1.2</poi-scratchpad.version>
+        <poi.version>4.1.2</poi.version>
+        <ooxml-schemas.version>1.1</ooxml-schemas.version>
+        <openxml4j.version>1.0-beta</openxml4j.version>
+        <lombok.version>1.18.32</lombok.version>
+		<extentreports.version>5.1.1</extentreports.version>
+		<jackson-databind.version>2.17.0</jackson-databind.version>
         <javafaker.version>1.0.2</javafaker.version>
-        <json-schema-validator.version>5.3.0</json-schema-validator.version>
-        <assertj-core.version>3.24.2</assertj-core.version>
-        <awaitility.version>4.2.0</awaitility.version>
+        <json-schema-validator.version>5.4.0</json-schema-validator.version>
+        <assertj-core.version>3.25.3</assertj-core.version>
+        <awaitility.version>4.2.1</awaitility.version>
         <org.json.version>20210307</org.json.version>
         
 	</properties>
